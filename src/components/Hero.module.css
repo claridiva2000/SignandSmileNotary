@@ -1,0 +1,110 @@
+.hero {
+  position: relative;
+  background: linear-gradient(180deg, var(--color-cream) 0%, #fdf0e4 100%);
+  padding-block: clamp(3rem, 7vw, 5.5rem) clamp(2.5rem, 5vw, 4rem);
+  overflow: hidden;
+}
+
+.inner {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .inner {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 3rem;
+  }
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-taupe);
+  margin-bottom: 1.25rem;
+}
+
+.badge svg {
+  width: 16px;
+  height: 16px;
+  color: var(--color-terracotta);
+}
+
+.title {
+  margin-bottom: 1.1rem;
+}
+
+.title em {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--color-terracotta);
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  color: var(--color-text-muted);
+  max-width: 52ch;
+  margin-bottom: 1.75rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+}
+
+.visual {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.visualCard {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.visualCard svg {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.visualCard:nth-child(1) svg {
+  color: var(--color-plum);
+}
+
+.visualCard:nth-child(2) svg {
+  color: var(--color-terracotta);
+}
+
+.visualCard strong {
+  display: block;
+  font-size: 1rem;
+  color: var(--color-plum);
+}
+
+.visualCard span {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.visualCard:nth-child(2) {
+  margin-left: clamp(0px, 5vw, 2.5rem);
+  background: var(--color-rose-soft);
+  border-color: transparent;
+}

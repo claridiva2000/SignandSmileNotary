@@ -1,0 +1,78 @@
+.banner {
+  position: relative;
+  background: var(--color-terracotta-dark);
+  color: var(--color-cream);
+  border-radius: var(--radius-lg);
+  padding: clamp(2rem, 4vw, 3rem);
+  overflow: hidden;
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (min-width: 820px) {
+  .banner {
+    grid-template-columns: auto 1fr auto;
+  }
+}
+
+.ring {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 249, 242, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: rgba(255, 249, 242, 0.1);
+}
+
+.ring svg {
+  width: 44px;
+  height: 44px;
+  color: var(--color-cream);
+}
+
+.eyebrow {
+  color: var(--color-cream);
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--color-cream);
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  margin-bottom: 0.6rem;
+}
+
+.copy {
+  color: var(--color-cream);
+  max-width: 52ch;
+}
+
+.tagRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.9rem;
+}
+
+.tag {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-plum);
+  background: var(--color-cream);
+  border-radius: var(--radius-pill);
+  padding: 0.3rem 0.75rem;
+}
+
+.cta {
+  align-self: center;
+}

@@ -1,0 +1,70 @@
+.wrap {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+@media (min-width: 820px) {
+  .wrap {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.towns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+}
+
+.town {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--color-cream);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.town svg {
+  width: 16px;
+  height: 16px;
+  color: var(--color-terracotta);
+}
+
+.note {
+  margin-top: 1.25rem;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.mapCard {
+  background: var(--color-plum);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.75rem;
+  min-height: 220px;
+}
+
+.mapCard svg {
+  width: 48px;
+  height: 48px;
+  color: var(--color-gold);
+}
+
+.mapCard strong {
+  color: var(--color-cream);
+  font-size: 1.2rem;
+}
+
+.mapCard span {
+  color: var(--color-rose-soft);
+}

@@ -1,0 +1,9 @@
+.altContact {
+  margin-top: 2.5rem;
+  color: var(--color-text-muted);
+}
+
+.altContact a {
+  color: var(--color-terracotta-dark);
+  font-weight: 600;
+}

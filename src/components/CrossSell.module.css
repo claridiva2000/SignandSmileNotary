@@ -1,0 +1,23 @@
+.wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: var(--color-plum);
+}
+
+.wrap svg {
+  width: 18px;
+  height: 18px;
+  color: var(--color-terracotta);
+  flex-shrink: 0;
+}
+
+.wrap a {
+  color: var(--color-terracotta-dark);
+  border-bottom: 1px solid transparent;
+}
+
+.wrap a:hover {
+  border-color: var(--color-terracotta-dark);
+}

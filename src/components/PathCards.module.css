@@ -1,0 +1,109 @@
+.grid {
+  display: grid;
+  gap: 1.75rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 780px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card {
+  border-radius: var(--radius-lg);
+  padding: clamp(1.75rem, 3vw, 2.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: var(--shadow-md);
+}
+
+.notary {
+  background: var(--color-plum);
+  color: var(--color-cream);
+}
+
+.wedding {
+  background: linear-gradient(160deg, var(--color-rose-soft) 0%, var(--color-surface) 65%);
+  border: 1px solid var(--color-border);
+  color: var(--color-plum);
+}
+
+.iconWrap {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notary .iconWrap {
+  background: rgba(255, 249, 242, 0.12);
+  color: var(--color-gold);
+}
+
+.wedding .iconWrap {
+  background: var(--color-surface);
+  color: var(--color-terracotta);
+}
+
+.iconWrap svg {
+  width: 30px;
+  height: 30px;
+}
+
+.card h2 {
+  font-size: 1.6rem;
+}
+
+.notary h2 {
+  color: var(--color-cream);
+}
+
+.card p {
+  color: var(--color-rose-soft);
+  max-width: 46ch;
+}
+
+.wedding p {
+  color: var(--color-text-muted);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-block: 0.25rem 0.5rem;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.notary .listItem {
+  color: var(--color-cream);
+}
+
+.wedding .listItem {
+  color: var(--color-plum);
+}
+
+.listItem svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.notary .listItem svg {
+  color: var(--color-gold);
+}
+
+.wedding .listItem svg {
+  color: var(--color-terracotta);
+}
