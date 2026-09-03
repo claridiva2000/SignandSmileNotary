@@ -24,7 +24,6 @@ interface ContactPayload {
   preferredTime: string;
   location: string;
   message: string;
-  honeypot: string;
 }
 
 const NOTIFICATION_RECIPIENT = "signandsmilenotary@gmail.com";
@@ -85,14 +84,7 @@ function validate(body: unknown): { data: ContactPayload } | { error: true } {
     preferredTime: typeof b.preferredTime === "string" ? b.preferredTime : "",
     location: typeof b.location === "string" ? b.location : "",
     message: typeof b.message === "string" ? b.message : "",
-    honeypot: typeof b.honeypot === "string" ? b.honeypot : "",
   };
-
-  // Honeypot submissions skip all further validation — we don't care if the
-  // rest looks valid, we just want to accept-and-drop as cheaply as possible.
-  if (data.honeypot.trim().length > 0) {
-    return { data };
-  }
 
   if (!SERVICE_OPTIONS.includes(data.service)) return { error: true };
   if (!isNonEmptyString(data.name)) return { error: true };
@@ -144,11 +136,6 @@ export const onRequestPost = async (context: {
       return jsonResponse({ ok: false }, 400);
     }
     const data = result.data;
-
-    // Honeypot tripped — pretend success, send nothing, spend no Brevo quota.
-    if (data.honeypot.trim().length > 0) {
-      return jsonResponse({ ok: true }, 200);
-    }
 
     if (!env.BREVO_API_KEY || !env.CONTACT_FROM_EMAIL) {
       console.error("Contact function misconfigured: BREVO_API_KEY or CONTACT_FROM_EMAIL is not set.");

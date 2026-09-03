@@ -7,8 +7,6 @@ export type ContactRequestPayload = {
   preferredTime: string;
   location: string;
   message: string;
-  /** Honeypot field — real visitors leave it empty. Never shown to users. */
-  honeypot: string;
 };
 
 /**

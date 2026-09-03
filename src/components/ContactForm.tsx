@@ -23,8 +23,6 @@ type FormState = {
   preferredTime: string;
   location: string;
   message: string;
-  // Honeypot — left blank by real visitors, hidden from screen readers and sighted users.
-  company: string;
 };
 
 type FormErrors = Partial<Record<keyof FormState, string>>;
@@ -38,7 +36,6 @@ const emptyForm: FormState = {
   preferredTime: "",
   location: "",
   message: "",
-  company: "",
 };
 
 const MAX_LENGTHS = {
@@ -115,7 +112,7 @@ function ContactFormInner() {
     submittingRef.current = true;
     setStatus("submitting");
     try {
-      await submitContactRequest({ ...form, honeypot: form.company });
+      await submitContactRequest(form);
       setStatus("success");
     } catch {
       setStatus("error");
@@ -302,19 +299,6 @@ function ContactFormInner() {
             {errors.message}
           </span>
         )}
-      </div>
-
-      <div className={styles.honeypot} aria-hidden="true">
-        <label htmlFor="company">Company</label>
-        <input
-          id="company"
-          name="company"
-          type="text"
-          tabIndex={-1}
-          autoComplete="off"
-          value={form.company}
-          onChange={(e) => update("company", e.target.value)}
-        />
       </div>
 
       <p className={styles.disclaimer}>

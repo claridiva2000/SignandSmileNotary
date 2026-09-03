@@ -129,15 +129,6 @@
   font-weight: 600;
 }
 
-.honeypot {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-}
-
 .disclaimer {
   font-size: 0.9rem;
   color: var(--color-text-muted);
