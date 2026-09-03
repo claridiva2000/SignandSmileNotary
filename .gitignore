@@ -34,6 +34,11 @@ yarn-error.log*
 .env*
 !.env.example
 
+# wrangler / Cloudflare Pages Functions local secrets
+.dev.vars
+!.dev.vars.example
+.wrangler/
+
 # vercel
 .vercel
 

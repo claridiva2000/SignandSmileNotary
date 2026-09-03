@@ -4,7 +4,7 @@ import { useRef, useState, type FormEvent } from "react";
 import { useSearchParams } from "next/navigation";
 import styles from "./ContactForm.module.css";
 import { CheckIcon } from "./icons";
-import { CONTACT_SERVICE_OPTIONS } from "@/lib/constants";
+import { BUSINESS_EMAIL, CONTACT_SERVICE_OPTIONS } from "@/lib/constants";
 import { submitContactRequest } from "@/lib/submitContactRequest";
 
 const SERVICE_SLUG_MAP: Record<string, (typeof CONTACT_SERVICE_OPTIONS)[number]> = {
@@ -130,7 +130,7 @@ function ContactFormInner() {
         <CheckIcon />
         <div>
           <h2>Request Sent</h2>
-          <p>Thanks! Your request has been sent to Sign &amp; Smile. We&apos;ll be in touch soon.</p>
+          <p>Thank you! Your request has been sent. We&apos;ll be in touch soon.</p>
           <p>
             Submitting a request does not confirm an appointment — we&apos;ll contact you to confirm
             availability and details.
@@ -333,7 +333,8 @@ function ContactFormInner() {
         </button>
         {status === "error" && (
           <span className={`${styles.formStatus} ${styles.formStatusError}`} role="alert">
-            We couldn&apos;t send your request right now. Please try again in a moment.
+            We couldn&apos;t send your request right now. Please try again or email{" "}
+            <a href={`mailto:${BUSINESS_EMAIL}`}>{BUSINESS_EMAIL}</a>.
           </span>
         )}
       </div>

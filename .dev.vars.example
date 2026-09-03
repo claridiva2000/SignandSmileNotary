@@ -1,0 +1,7 @@
+# Local secrets for the Cloudflare Pages Function (functions/api/contact.ts),
+# read by `wrangler pages dev`. Copy this file to `.dev.vars` (gitignored) and
+# fill in real values for local testing. In production these are set in the
+# Cloudflare Pages dashboard instead — see README.md.
+
+BREVO_API_KEY=your_brevo_api_key
+CONTACT_FROM_EMAIL=a_verified_sender@example.com

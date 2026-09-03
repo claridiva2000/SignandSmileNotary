@@ -1,10 +1,10 @@
-export const SITE_NAME = "Sign & Smile Notary";
+export const SITE_NAME = "Sign & Smile Texas";
 export const SITE_TAGLINE = "Notary Public & Wedding Officiant";
 export const SITE_URL = "https://www.signandsmiletexas.com";
 
 // Placeholder contact details — replace with real business info before launch.
-export const BUSINESS_PHONE_DISPLAY = "(281) 555-0142";
-export const BUSINESS_PHONE_TEL = "+12815550142";
+export const BUSINESS_PHONE_DISPLAY = "(832) 206-5095";
+export const BUSINESS_PHONE_TEL = "+18322065095";
 export const BUSINESS_EMAIL = "hello@signandsmiletexas.com";
 export const BUSINESS_HOURS = "By appointment, 7 days a week";
 
