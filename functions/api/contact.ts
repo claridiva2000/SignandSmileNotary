@@ -123,6 +123,15 @@ export const onRequestPost = async (context: {
   const { request, env } = context;
 
   try {
+    // TEMPORARY DIAGNOSTICS — remove once the env var misconfiguration is
+    // confirmed resolved. Logs presence only (booleans) and the runtime
+    // identifier; never the actual secret or email value.
+    console.log("[contact diagnostics]", {
+      hasBrevoApiKey: Boolean(env.BREVO_API_KEY),
+      hasContactFromEmail: Boolean(env.CONTACT_FROM_EMAIL),
+      runtime: typeof navigator !== "undefined" ? navigator.userAgent : "unknown",
+    });
+
     let body: unknown;
     try {
       body = await request.json();
