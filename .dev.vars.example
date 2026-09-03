@@ -1,7 +1,9 @@
-# Local secrets for the Cloudflare Pages Function (functions/api/contact.ts),
+# Local secret for the Cloudflare Pages Function (functions/api/contact.ts),
 # read by `wrangler pages dev`. Copy this file to `.dev.vars` (gitignored) and
-# fill in real values for local testing. In production these are set in the
-# Cloudflare Pages dashboard instead — see README.md.
+# fill in a real key for local testing. In production this is set as an
+# encrypted Secret in the Cloudflare Pages dashboard — see docs/brevo-setup.md.
+#
+# CONTACT_FROM_EMAIL is not needed here — it's already defined in
+# wrangler.toml under [vars], which `wrangler pages dev` reads automatically.
 
 BREVO_API_KEY=your_brevo_api_key
-CONTACT_FROM_EMAIL=a_verified_sender@example.com
